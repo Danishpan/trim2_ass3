@@ -1,5 +1,15 @@
 <html>
-
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        body{
+            margin: 20px;
+            background-color: azure;
+            color: cadetblue;
+            font-family: Montserrat;
+        }
+    </style>
+</head>
 <body>
 <h1>Welcome, {{name}} !</h1>
 <br>
@@ -21,16 +31,16 @@
 </div>
 {{/cards}}
 <hr>
-{{#allcards}}
-<div>
-    <b>{{number}}</b>
-    <span>{{bank}}</span>
-    <i>{{balance_kzt}}</i>
-    <i>{{balance_usd}}</i>
-    <i>{{balance_eur}}</i>
-    <i>{{owner.getId}}</i>
-</div>
-{{/allcards}}
+<!--{{#allcards}}-->
+<!--<div>-->
+<!--    <b>{{number}}</b>-->
+<!--    <span>{{bank}}</span>-->
+<!--    <i>{{balance_kzt}}</i>-->
+<!--    <i>{{balance_usd}}</i>-->
+<!--    <i>{{balance_eur}}</i>-->
+<!--    <i>{{owner.getId}}</i>-->
+<!--</div>-->
+<!--{{/allcards}}-->
 <a href="/transfer">Transfer money to another client's card</a>
 <br>
 <a href="/convert">Convert money</a>
