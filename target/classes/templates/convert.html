@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Money</title>
+</head>
+<body>
+<h1>Convert money between currencies</h1>
+<form method="post" action="/convert">
+    <p>Choose a cart to convert money from</p>
+    <select id="outcomeCard" name="outcomeCard">
+        <option th:each="card: ${cards}" th:value="${card.getNumber}" th:text="${card.getNumber}">
+        </option>
+    </select>
+
+    <p>Choose a currency to convert money from</p>
+    <select id="outcomeCurrency" name="outcomeCurrency">
+        <option value="kzt">KZT</option>
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+    </select>
+
+    <p>Choose a currency to convert money to</p>
+    <select id="incomeCurrency" name="incomeCurrency">
+        <option value="kzt">KZT</option>
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+    </select>
+
+    <p>Enter an amount of money to convert</p>
+    <input type="text" name="amount" placeholder="Amount of money">
+    <div><input type="submit" value="Convert"/></div>
+</form>
+
+</body>
+</html>

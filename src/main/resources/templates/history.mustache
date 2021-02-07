@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History of Transactions</title>
+</head>
+<body>
+<br>
+<p>Income Transactions</p>
+<br>
+{{#incomeTransactions}}
+<div>
+    <b>{{amount}}</b>
+</div>
+{{/incomeTransactions}}
+
+<br>
+<p>Outcome Transactions</p>
+<br>
+{{#outcomeTransactions}}
+<div>
+    <b>{{amount}}</b>
+</div>
+{{/outcomeTransactions}}
+</body>
+</html>

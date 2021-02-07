@@ -1,0 +1,45 @@
+<html>
+
+<body>
+<h1>Welcome, {{name}} !</h1>
+<br>
+<!--<div>-->
+    <div>
+        <form action="/logout" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+<div>User card list</div>
+{{#cards}}
+<div>
+    <b>{{number}}</b>
+    <span>{{bank}}</span>
+    <i>{{balance_kzt}}</i>
+    <i>{{balance_usd}}</i>
+    <i>{{balance_eur}}</i>
+    <i>{{owner.getId}}</i>
+</div>
+{{/cards}}
+<hr>
+{{#allcards}}
+<div>
+    <b>{{number}}</b>
+    <span>{{bank}}</span>
+    <i>{{balance_kzt}}</i>
+    <i>{{balance_usd}}</i>
+    <i>{{balance_eur}}</i>
+    <i>{{owner.getId}}</i>
+</div>
+{{/allcards}}
+<a href="/transfer">Transfer money to another client's card</a>
+<br>
+<a href="/convert">Convert money</a>
+<br>
+<a href="/transfer/own">Transfer money to your another card</a>
+<br>
+<a href="/change">Change password</a>
+{{#passwordName}}
+    {{passwordName}}
+{{/passwordName}}
+</body>
+</html>

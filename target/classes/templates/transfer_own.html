@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer Money</title>
+</head>
+<body>
+<h1>Transfer money to your another card</h1>
+<form method="post" action="/transfer/own">
+    <p>Choose a card to transfer money from</p>
+    <select id="outcomeCard" name="outcomeCard">
+        <option th:each="card: ${cards}" th:value="${card.getNumber}" th:text="${card.getNumber}">
+        </option>
+    </select>
+    <p>Choose a card to transfer money from</p>
+    <select id="incomeCard" name="incomeCard">
+        <option th:each="card: ${cards}" th:value="${card.getNumber}" th:text="${card.getNumber}">
+        </option>
+    </select>
+    <p>Enter an amount of money to transfer</p>
+    <input type="text" name="amount" placeholder="Amount of money">
+    <div><input type="submit" value="Transfer"/></div>
+</form>
+
+</body>
+</html>
